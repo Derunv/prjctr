@@ -58,7 +58,7 @@ day_of_given_date = int(given_date[2])
 month_of_given_date = int(given_date[1])
 year_of_given_date = int(given_date[0])
 max_days_in_month = str('31 28 31 30 31 30 31 31 30 31 30 31').split()
-if year_of_given_date % 4 == 0: #check if is leap year 
+if year_of_given_date % 4 == 0:
     max_days_in_month[1] = 29
 if int(max_days_in_month[month_of_given_date - 1]) > day_of_given_date:
     print (f'**Input a year:** {year_of_given_date}\n'
