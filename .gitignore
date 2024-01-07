@@ -312,4 +312,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# My ignore section
+.Lection
+
 # End of https://www.toptal.com/developers/gitignore/api/windows,pycharm,python
