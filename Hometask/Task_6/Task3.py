@@ -1,9 +1,9 @@
 def unique_elements(arr: list) -> list:
-    unique_list = [i for i in arr if arr.count(i) == 1]
+    # unique_list = [i for i in arr if arr.count(i) == 1]
     # for i in arr:
     #     if arr.count(i) == 1:
     #         unique_list.append(i)
-    return unique_list
+    return [i for i in arr if arr.count(i) == 1]
 
 
 def test_unique_elements():
