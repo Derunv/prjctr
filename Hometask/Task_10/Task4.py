@@ -7,7 +7,7 @@ try:
 except FileNotFoundError:
     get_csv(stat_challenge(100))
 
-with open('game_challenge_score.csv', mode='r') as file, open('high_scores.csv', 'w') as high_scores:
+with open('game_challenge_score.csv', mode='r') as file, open('high_scores.csv', 'w', newline='') as high_scores:
     reader = csv.DictReader(file)
     players_score = {}
     for row in reader:
