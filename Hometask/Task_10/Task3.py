@@ -8,7 +8,7 @@ def play_game(name: str) -> tuple:
     return (name, random.randint(1, 1000))
 
 
-def game_challenge(rounds: int) -> list:
+def game_challenge(rounds: int = 100) -> list:
     games_record = []
     for i in range(rounds):
         for player in players:
