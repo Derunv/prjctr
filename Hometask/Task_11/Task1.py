@@ -1,7 +1,12 @@
 import requests
 import random
 from keys import key_giphy as key
-# Please create in the same directory file with name  keys.py and add this
+'''Please create in the same directory file with name  keys.py and add this
+def key_giphy():
+    return 'your giphy key'
+def key_telegram():
+    return 'your telegram id'
+    '''
 
 
 GIPHY_URL = 'https://api.giphy.com/v1/gifs/search'
