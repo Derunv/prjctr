@@ -1,0 +1,57 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table rooms_availability  {
+  room_id integer
+  room_availability integer
+  created_at timestamp
+}
+
+Table users {
+  id integer [primary key]
+  username varchar
+  is_role_hosts bool
+}
+
+Table reviews {
+  id integer [primary key]
+  title varchar
+  body text [note: 'Content of the post']
+  user_id integer
+  status varchar
+  created_at timestamp
+  room_id integer
+}
+
+Table reservations {
+  id integer [primary key]
+  username varchar
+  role_hosts bool
+  room_id integer
+  reserv bool
+}
+
+Table rooms {
+  id integer [primary key]
+  amount_of_residents integer
+  price float
+  availability bool
+  equipment_id integer
+}
+
+Table equipment {
+  id integer [primary key]
+  tv bool
+  ac bool
+  refrigerator bool
+}
+
+Ref: rooms.equipment_id > equipment.id
+Ref: reviews.room_id > rooms.id
+Ref: reservations.room_id > rooms.id
+Ref: rooms_availability.room_id > rooms.id
+Ref: rooms_availability.room_availability > rooms.availability
+Ref: reservations.reserv > rooms.availability
+Ref: reservations.username > users.username
+//Ref: reservations.role_hosts > user.is_role_hosts
+
