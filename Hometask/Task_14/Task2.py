@@ -8,6 +8,7 @@ class Restaurant():
 class FastFood(Restaurant):
     def __init__(self, name: str, cuisine: str, menu: dict, drive_thru: bool):
         Restaurant.__init__(self, name, cuisine, menu)
+        # super().__init__(name, cuisine, menu)
         self.drive_thru = drive_thru
 
 
